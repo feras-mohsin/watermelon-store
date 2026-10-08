@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="WaterMelon.css" />
+
+    <title>WoterMelon | Smart Electronics Store</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">WaterMelon</div>
+      <nav>
+        <a onclick="filterCat('all')">All</a>
+        <a onclick="filterCat('phone')">Phones</a>
+        <a onclick="filterCat('laptop')">Laptops</a>
+
+        <a onclick="filterCat('gaming')">Gaming Devices</a>
+        <a onclick="filterCat('home')">Home Devices</a>
+        <a onclick="filterCat('gym')">Gym Devices</a>
+        <a onclick="filterCat('accessory')">Accessories</a>
+        <button class="login-btn" onclick="openLogin()">Log in</button>
+        <div class="cart-icon" onclick="openCart()">
+          🛒
+          <span class="cart-count" id="cartCount">0</span>
+        </div>
+      </nav>
+    </header>
+
+    <section class="training">
+      <h1>WaterMelon Smart Store</h1>
+      <p>
+        WaterMelon is an all-in-one online store offering smart electronics,
+        gaming equipment, modern home devices, and professional gym training
+        machines. We focus on high-quality products, modern design, and
+        technology that enhances your daily lifestyle.
+      </p>
+    </section>
+
+    <div class="controls">
+      <input
+        type="text"
+        id="search"
+        placeholder="Search..."
+        onkeyup="render()"
+      />
+    </div>
+
+    <div id="sections"></div>
+
+    <section class="about-us">
+      <h1>About Us</h1>
+      <p>
+        WaterMelon is dedicated to providing our customers with high-quality
+        electronics, gaming gear, home devices, and gym equipment all in one
+        place. Our mission is to deliver innovative products, excellent service,
+        and an enjoyable shopping experience. We value quality, reliability, and
+        customer satisfaction, ensuring you always find the perfect product to
+        enhance your lifestyle.
+      </p>
+    </section>
+
+    <div class="modal" id="modal">
+      <div class="modal-content" id="modalContent"></div>
+      <div class="close" onclick="closeModal()">✖</div>
+    </div>
+
+    <div class="modal" id="loginModal">
+      <div
+        class="modal-content"
+        style="flex-direction: column; max-width: 400px; text-align: center"
+      >
+        <h2>Login / Register</h2>
+        <form class="login-form">
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit" class="btn">Login</button>
+          <p>Don't have an account? <a href="#">Register</a></p>
+        </form>
+        <div class="close" onclick="closeLogin()">✖</div>
+      </div>
+    </div>
+    <script src="WaterMelon.js"></script>
+  </body>
+</html>
